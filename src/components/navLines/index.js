@@ -1,9 +1,9 @@
 import './index.css';
 
-const NavLines = ({linesNames}) => {
+const NavLines = ({linesNames, setHeroSlideNumberByIndex}) => {
     return (
-        <div>{linesNames}</div>
+        <div onClick={setHeroSlideNumberByIndex}>{linesNames}</div>
     )
-}
+};
 
 export default NavLines;
