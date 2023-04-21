@@ -38,20 +38,20 @@ function App() {
   return (
     <div className="main-container">
       <div className="slider-container">
-        <Arrow onСlick={slidePrev} isLeft={true} />
+        <Arrow scrollGallery={slidePrev} isLeft={true} />
         <div id="super-slider-card" className="slider-card">
           <Slider 
             heroeName={heroeInfo.superHeroeCharacter}
             universe={heroeInfo.comicsUniverse}
             alterEgo={heroeInfo.alterEgo}
-            activity={heroeInfo.activity}
+            activity={heroeInfo.typeOfActivity}
             friends={heroeInfo.friends}
-            powers={heroeInfo.powers}
+            powers={heroeInfo.superPowers}
             description={"по популярности ... бла бла бла"}
             image={heroeInfo.superHeroePic} 
           />
         </div>
-        <Arrow onСlick={slideNext} isLeft={false} />
+        <Arrow scrollGallery={slideNext} isLeft={false} />
       </div>
       <div className="lines-container">
       {superArr.map((item, index) => (
