@@ -47,7 +47,7 @@ function App() {
             activity={heroeInfo.typeOfActivity}
             friends={heroeInfo.friends}
             powers={heroeInfo.superPowers}
-            description={"по популярности ... бла бла бла"}
+            description={heroeInfo.moreDetailed}
             image={heroeInfo.superHeroePic} 
           />
         </div>
@@ -55,9 +55,9 @@ function App() {
       </div>
       <div className="lines-container">
       {superArr.map((item, index) => (
-        <div key={index} className="lines">
+        <div key={item.id} className="lines">
           <NavLines 
-            linesNames={index}
+            icon={getSuperHeroeInfo(index).superHeroeIcon}
             setHeroSlideNumberByIndex={() => setHeroSlideNumberByIndex(index)}
           />
         </div>

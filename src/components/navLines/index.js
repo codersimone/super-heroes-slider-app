@@ -1,8 +1,10 @@
 import './index.css';
 
-const NavLines = ({linesNames, setHeroSlideNumberByIndex}) => {
+const NavLines = ({setHeroSlideNumberByIndex, icon}) => {
     return (
-        <div onClick={setHeroSlideNumberByIndex}>{linesNames}</div>
+        <div onClick={setHeroSlideNumberByIndex}>
+            <img src={'/' + icon} className="heroesIcons"></img>
+        </div>
     )
 };
 
